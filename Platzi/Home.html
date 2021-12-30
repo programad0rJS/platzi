@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+
+    <link rel="shortcut icon" href="https://static.platzi.com/static/images/logos/platzi.png" type="image/x-icon">
+
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #000;
+            cursor: url(https://www.w3schools.com/images/compatible_chrome.gif), auto;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 9px;
+            height: 8px;
+        }
+
+
+
+        ::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        ::selection {
+            background: yellow;
+            color: red;
+        }
+
+        .Fondos {
+            background: #000;
+            padding: 10px;
+        }
+
+        .Locos {
+            /* display: flex; */
+            position: relative;
+            list-style: none;
+            list-style-type: none;
+            top: -60px;
+            left: 450px;
+            color: white;
+            text-decoration: none;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+        }
+
+        .Locos:hover {
+            color: gray;
+        }
+
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+        }
+
+
+        .modal-content {
+            background-color: #fefefe;
+            margin: 15% auto;
+            padding: 20px;
+            border: 1px solid #888;
+            width: 80%;
+            border-radius: 20px;
+
+        }
+
+
+        .close {
+            color: #aaa;
+            float: right;
+            font-size: 28px;
+            font-weight: bold;
+        }
+
+        .close:focus {
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .Buttones {
+            position: relative;
+            top: -110px;
+            left: 1200px;
+            border: none;
+            cursor: pointer;
+        }
+
+        .fas {
+
+            padding: 10px;
+            font-size: 20px;
+            width: 100px;
+            text-decoration: none;
+
+
+        }
+
+        .fa-search {
+            background: green;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Fondos">
+        <a href="Inicio.html" accesskey="W">
+            <img src="https://static.platzi.com/static/images/logos/platzi.png" alt="Logo Platzi " class="Logo__Platzi">
+        </a>
+    </div>
+
+    <div>
+        <ul>
+
+            <li><a href="Blog.html" accesskey="B" class="Locos">Blog</a></li>
+            <li><span accesskey="E" class="Locos" id="myBtn"
+                    style="position: relative; left: 569px;  top: -80px; ;">Contactanos</span></li>
+            <div id="myModal" class="modal">
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <center>
+                        <div>
+                            <h1>¿Tienes alguna duda o quieres comunicarte con nosotros?</h1>
+                            <br>
+                            <br>
+                        </div>
+
+                        <div>
+                            <a href="Como-Funcionan-Cursos.html" target="_blank" rel="noopener noreferrer" accesskey="C"
+                                style="text-decoration: none; color: aqua; font-family: Arial, Helvetica, sans-serif;">¿Cómo
+                                funcionan los cursos? ¿Debo seguir un horario? </a>
+                            <br>
+                            <br>
+
+                        </div>
+
+                        <div>
+                            <a href="Qué-necesito-para-tomar-los-cursos.html" target="_blank" accesskey="Q"
+                                style="text-decoration: none; color: aqua; font-family: Arial, Helvetica, sans-serif;">¿Qué
+                                necesito
+                                para
+                                tomar los cursos?</a>
+                            <br>
+                            <br>
+                        </div>
+
+                        <div>
+                            <a href="Qué-planes-tienen-disponibles-para-mi.html" target="_blank" accesskey="G"
+                                style="text-decoration: none; color: aqua; font-family: Arial, Helvetica, sans-serif;">¿Qué
+                                planes
+                                tienen disponibles para mi?</a>
+                            <br>
+                            <br>
+                        </div>
+
+                        <div>
+                            <a href="mailto:josuerodriguezfasa@gmail.com" accesskey="T"
+                                style="text-decoration: none; color: aqua; font-family: Arial, Helvetica, sans-serif;">Contactarme
+                                Por Email</a>
+                        </div>
+                    </center>
+                </div>
+            </div>
+            <li><a href="Planes.html" accesskey="P" class="Locos"
+                    style="position: relative; top: -99px; left: 500px; ">Planes</a></li>
+
+
+            <a href="Buscadores.html" accesskey="S">
+                <button class="Buttones" title="Buscador"><i class="fas fa-search"></i></button>
+            </a>
+
+
+        </ul>
+    </div>
+
+
+    <div class="FlexboxScroll">
+        <div>
+
+            <a href="#Seccion-1" class="ScrollButtones" style="text-decoration: none;">
+                TUS AVANCES
+            </a>
+
+            <a href="#Seccion-2" class="ScrollButtones" style="text-decoration: none;">
+                TUS RUTAS
+            </a>
+
+            <a href="#Seccion-3" class="ScrollButtones" style="text-decoration: none;">
+                TU APRENDIZAJE
+            </a>
+        </div>
+    </div>
+
+
+    <div id="Seccion-1">
+        <h1>Hola, Josue</h1>
+
+
+
+        <h1>Continúa aprendiendo</h1>
+
+        
+        <div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <div id="Seccion-2">
+        
+    </div>
+
+
+    <div id="Seccion-3">
+
+    </div>
+
+
+
+    <script>
+        var modal = document.getElementById("myModal");
+
+
+        var btn = document.getElementById("myBtn");
+
+
+        var span = document.getElementsByClassName("close")[0];
+
+
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+
+        span.onclick = function () {
+            modal.style.display = "none";
+        }
+    </script>
+
+
+
+
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+
+        .FlexboxScroll {
+            position: relative;
+            top: -95px;
+            left: -99px;
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+        .ScrollButtones {
+            border: none;
+            background-color: black;
+            color: white;
+            margin: 8px;
+        }
+    </style>
+</body>
+
+</html>

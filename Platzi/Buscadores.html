@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Buscadores</title>
+    <link rel="shortcut icon" href="https://static.platzi.com/static/images/logos/platzi.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            cursor: url(https://www.w3schools.com/images/compatible_chrome.gif), auto;
+        }
+
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 9px;
+            height: 8px;
+        }
+
+
+
+        ::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        ::selection {
+            background: yellow;
+            color: red;
+        }
+
+
+        .Fondos {
+            background: #000;
+            padding: 10px;
+        }
+
+        .BuscadorDeCursos {
+            box-sizing: border-box;
+            caret-color: aqua;
+            width: 40%;
+
+            border-radius: 20px;
+            font-size: 20px;
+            color: blue;
+            background-image: url('https://www.w3schools.com/howto/searchicon.png');
+            background-position: 10px 10px;
+            background-size: 25px;
+
+
+
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+        }
+
+        .BuscadorDeCursos:focus {
+            border-color: aqua;
+
+            outline: none
+        }
+
+        input::placeholder {
+
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="Fondos">
+        <a href="Inicio.html" accesskey="W">
+            <img src="https://static.platzi.com/static/images/logos/platzi.png" alt="Logo Platzi " class="Logo__Platzi">
+        </a>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="headline tagline">
+        <center>
+            <input type="text" placeholder="Buscar Cursos " class="BuscadorDeCursos" id="Buscador">
+
+            <br><br><br><br><br><br><br><br><br><br>
+
+        </center>
+
+        <article>
+
+            <section id="ResultadosDeBuqueda">
+
+            </section>
+
+        </article>
+
+        <br>
+        <br>
+
+
+
+
+
+
+    </div>
+
+
+    <script>
+        const Cursos = [{
+
+                Nombre: 'Javascript',
+                Img: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/10/JavaScript-en-el-navegador.jpeg',
+                Valor: 'S/112 SOLES',
+                Button: 'Aceptar La Compra',
+                Enlaces: './Javascript.html'
+
+            },
+            {
+                Nombre: 'React',
+                Img: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/09/React-desde-cero-2021.jpeg',
+                Valor: 'S/114 SOLES',
+                Button: 'Aceptar La Compra',
+                Enlaces: './React.html'
+            },
+            {
+                Nombre: 'Angular',
+                Img: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/10/Angular-Desde-Cero.jpeg',
+                Valor: 'S/212 SOLES',
+                Button: 'Aceptar La Compra',
+                Enlaces: './Angular.html'
+            },
+
+            {
+                Nombre: 'Vue',
+                Img: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/11/Vue-js-desde-cero.jpg',
+                Valor: 'S/132 SOLES',
+                Button: 'Aceptar La Compra',
+                Enlaces: './Vue.html'
+            },
+            {
+                Nombre: 'Ingles',
+                Img: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/11/Ingles-desde-cero.jpeg',
+                Valor: 'S/314 SOLES',
+                Button: 'Aceptar La Compra',
+                Enlaces: './Ingles.html'
+            },
+
+            {
+                Nombre: 'React Native',
+                Img: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/10/Desarrollo-de-apps-con-React-Native.jpeg',
+                Valor: 'S/112 SOLES',
+                Button: 'Aceptar La Compra',
+                Enlaces: './React-Native.html'
+            },
+
+            {
+                Nombre: 'Css',
+                Img: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/10/CSS-desde-cero.jpeg',
+                Valor: 'S/112 SOLES',
+                Button: 'Aceptar La Compra',
+                Enlaces: './Css.html'
+            },
+            {
+                Nombre: 'Sass',
+                Img: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/10/Sass-Desde-Cero.jpeg',
+                Valor: 'S/162 SOLES',
+                Button: 'Aceptar La Compra',
+                Enlaces: './Sass.html'
+            },
+
+            {
+                Nombre: 'Node.js',
+                Img: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/10/Node.js-desde-cero-2020.jpeg',
+                Valor: 'S/412 SOLES',
+                Button: 'Aceptar La Compra',
+                Enlaces: './Node.js.html'
+            },
+            {
+                Nombre: 'PHP',
+                Img: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/10/PHP-Desde-Cero.jpeg',
+                Valor: 'S/112 SOLES',
+                Button: 'Aceptar La Compra',
+                Enlaces: './PHP.html'
+            },
+            {
+                Nombre: 'SVG',
+                Img: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/10/SVG-Desde-Cero.jpeg',
+                Valor: 'S/112 SOLES',
+                Button: 'Aceptar La Compra',
+                Enlaces: './SVG.html'
+            },
+
+            {
+                Nombre: 'TypeScript',
+                Img: 'https://descargarsoftwaregratis.com/wp-content/uploads/2021/10/TypeScript-Desde-Cero.jpeg',
+                Valor: 'S/112 SOLES',
+                Button: 'Aceptar La Compra',
+                Enlaces: './TypeScript.html'
+            },
+
+        ]
+
+
+
+        const Buscador = document.querySelector('#Buscador');
+        const ResultadosDeBuqueda = document.querySelector('#ResultadosDeBuqueda');
+
+        const Filtrar = () => {
+
+            ResultadosDeBuqueda.innerHTML = ''
+
+            const Texto = Buscador.value.toLowerCase();
+
+
+            for (let Curso of Cursos) {
+
+
+
+                let Nombre = Curso.Nombre.toLowerCase();
+
+
+                if (Nombre.indexOf(Texto) !== -1) {
+                    ResultadosDeBuqueda.innerHTML += `
+                    
+                   <div style="display: grid;  grid-template-columns: repeat(4, 200px); ">
+                        
+
+                        <img src="${Curso.Img}" alt="Cursos" style="display: grid; grid-gap: 10px; width: 190px; "> 
+                     
+
+                        <h1 >${Curso.Nombre}</h1>  
+
+
+                        <b>${Curso.Valor}</b>
+
+                           
+                                <a href="${Curso.Enlaces}" target="_blank">
+                                    <button style="color: green; background: white; border: 4px solid green; border-radius: 10px; padding: 10px;">${Curso.Button} </button>
+                                </a>     
+              
+                      
+
+                    </div>
+                    
+
+                    `
+                }
+
+                if (ResultadosDeBuqueda.innerHTML === '') {
+                    ResultadosDeBuqueda.innerHTML += `
+                       <center>
+                           <h1>Curso No Encontrado, Lo Siento, Busque Otro Curso </h1>
+                       </center>
+                    `
+                }
+
+            }
+
+        }
+
+
+        Buscador.addEventListener('click', Filtrar);
+        Buscador.addEventListener('keyup', Filtrar);
+
+        Filtrar()
+    </script>
+
+
+
+</body>
+
+</html>

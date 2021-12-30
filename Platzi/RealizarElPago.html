@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Realizar El Pago</title>
+    <link rel="shortcut icon" href="https://static.platzi.com/static/images/logos/platzi.png" type="image/x-icon">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #000;
+            color: white;
+            font-weight: 600;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        ::-webkit-scrollbar {
+            width: 9px;
+            height: 8px;
+        }
+
+
+
+        ::-webkit-scrollbar-thumb {
+            background: #ccc;
+            border-radius: 4px;
+        }
+
+        .Fondos {
+            padding: 10px;
+        }
+
+        .Form__Control {
+            width: 500px;
+            padding: 20px;
+            height: 10px;
+            outline: none;
+            /* border: none; */
+            border-radius: 10px;
+            caret-color: green;
+        }
+
+        .Form__Control:focus {
+            border-color: red;
+
+        }
+
+        .Exito {
+            width: 400px;
+            background-color: #98ca3f;
+            color: black;
+            border-radius: 8px;
+            border: 10px solid #98ca3f;
+        }
+        .Centrado{
+            position: relative;
+            left: 339px;
+
+        }
+        ::selection{
+            background: yellow;
+            color: red;
+        }
+     
+
+
+    </style>
+
+</head>
+
+<body style="overflow: hidden;">
+    <div class="Fondos">
+        <a href="Inicio.html" accesskey="W">
+            <img src="https://static.platzi.com/static/images/logos/platzi.png" alt="Logo Platzi " class="Logo__Platzi">
+        </a>
+    </div>
+    <br>
+    <br>
+    <br>
+
+   <div class="Centrado">
+    <form>
+        <input type="checkbox" checked="checked" class="Checkeds">
+
+        <div>
+            <input type="text" placeholder="Nombre Titular De La Tarjeta " required class="Form__Control">
+        </div>
+        <br>
+        <div>
+            <input type="number" placeholder="Numero De Tarjeta" required class="Form__Control">
+        </div>
+
+
+        <div>
+            <br>
+            <br>
+            <button class="Exito">Pagar</button>
+            <br>
+            <br>
+            <div>
+                <p>Invertir en ti es la única inversión con retorno garantizado</p>
+            </div>
+        </div>
+    </form>
+   </div>
+
+
+
+
+</body>
+
+</html>
